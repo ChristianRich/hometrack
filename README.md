@@ -38,6 +38,7 @@
 │   └── www.js
 ├── config
 │   └── default.yaml
+├── docker-compose.yaml
 ├── index.js
 ├── newrelic.js
 ├── package.json
@@ -46,7 +47,6 @@
     └── mock
         ├── hometrack-sample-request.json
         └── hometrack-sample-response.json
-
 ```
 
 ## Stack
