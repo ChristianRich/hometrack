@@ -9,7 +9,7 @@
     "coverage": "NODE_ENV=TEST nyc --reporter=html --reporter=text ava --timeout=10000 **/*.spec.js"
   },
   "engines": {
-    "node": "<=6.9.4",
+    "node": "<=6.11.2",
     "npm": "<=3.10.10"
   },
   "repository": {

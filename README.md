@@ -55,6 +55,7 @@
 - Node (es6/7)
 - Express 4
 - Swagger
+- Docker
 
 ### Plugins
 - Babel
@@ -70,13 +71,27 @@ This app requires [Node.js](https://nodejs.org/) v 6.11.2 or later to run
 
 Clone this project.
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and start the server:
 
 ```sh
-$ cd hometrack
+$ cd ./hometrack
 $ npm install
 $ npm start
 ```
+
+Service is now running on localhost:3000
+
+Or using Docker:
+
+Install Docker:
+
+https://www.docker.com/get-docker
+
+```sh
+`docker-compose up --build`
+```
+
+Service is now running on localhost:8080
 
 ### Swagger
 

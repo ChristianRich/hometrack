@@ -61,9 +61,9 @@ export default {
         let yaml = toYaml.stringify(results.resolved, 8, 2);
         await fs.writeFileSync(DEST, yaml);
 
-        console.log(`Swagger spec successfully built:`);
-        console.log(`    src: ${SRC}`);
-        console.log(`    dest: ${DEST}`);
+        //console.log(`Swagger spec successfully built:`);
+        //console.log(`    src: ${SRC}`);
+        //console.log(`    dest: ${DEST}`);
     },
 
     /**
@@ -88,12 +88,12 @@ export default {
             swaggerConfig.host = url.parse(process.env.HOST).host; // strip protocol from hostname, Swagger doens't like it
         } else{
             swaggerConfig.schemes = ['http'];
-            swaggerConfig.host = 'localhost:' + (process.env.PORT || 3000);
+            swaggerConfig.host = 'localhost:' + (process.env.SWAGGER_UI_PORT || process.env.PORT || 3000);
         }
 
-        console.log(`\nSwagger back env:`);
-        console.log(`    host: ${swaggerConfig.host}`);
-        console.log(`    protocol: ${swaggerConfig.schemes}`);
+        //console.log(`\nSwagger back env:`);
+        //console.log(`    host: ${swaggerConfig.host}`);
+        //console.log(`    protocol: ${swaggerConfig.schemes}`);
 
         const yaml = toYaml.stringify(swaggerConfig, 8, 2);
         await fs.writeFile(DEST, yaml);
@@ -119,9 +119,9 @@ export default {
         }
 
         swaggerExpress.register(app);
-        console.log('Registered Swagger middleware');
+        //console.log('Registered Swagger middleware');
 
         app.use(SwaggerUi(swaggerExpress.runner.swagger));
-        console.log('Registered Swagger UI at /doc');
+        //console.log('Registered Swagger UI at /doc');
     }
 }
