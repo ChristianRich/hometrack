@@ -2,6 +2,7 @@ import app from '+/api';
 import os from 'os';
 import cluster from 'cluster';
 import { default as swagger } from '../api/swagger/util';
+const USE_CLUSERS = false; // Clusters will not work on Heroku unless you purchase more dynos $$$
 
 (async() => {
 
@@ -12,10 +13,10 @@ import { default as swagger } from '../api/swagger/util';
 	}
 
 	const numCPUs = os.cpus().length;
-	console.log(`Starting ${numCPUs} clusters`);
 
-	if (cluster.isMaster) {
+	if (cluster.isMaster && USE_CLUSERS === true) {
 
+		console.log(`Starting ${numCPUs} clusters`);
 		console.log(`Master ${process.pid} is running`);
 
 		for (let i = 0; i < numCPUs; i++) {
