@@ -2,7 +2,7 @@ import app from '+/api';
 import os from 'os';
 import cluster from 'cluster';
 import { default as swagger } from '../api/swagger/util';
-const USE_CLUSERS = false; // Clusters will not work on Heroku unless you purchase more dynos $$$
+const USE_CLUSERS = process.env.USE_CLUSTERS || true;
 
 (async() => {
 
