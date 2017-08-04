@@ -5,8 +5,8 @@
   "main": "babel-node index.js",
   "scripts": {
     "start": "./node_modules/babel-cli/bin/babel-node.js index.js",
-    "test": "NODE_ENV=TEST ava --timeout=10000 **/*.spec.js",
-    "coverage": "NODE_ENV=TEST nyc --reporter=html --reporter=text ava --timeout=10000 **/*.spec.js"
+    "test": "NODE_ENV=TEST ava --timeout=20000 **/*.spec.js",
+    "coverage": "NODE_ENV=TEST nyc --reporter=html --reporter=text ava --timeout=20000 **/*.spec.js"
   },
   "engines": {
     "node": "<=6.11.2",
