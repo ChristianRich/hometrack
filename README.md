@@ -7,6 +7,45 @@
 ### Directory structure
 
 ```shell
+├── Dockerfile
+├── README.md
+├── api
+│   ├── controllers
+│   │   ├── filter.js
+│   │   └── ping.js
+│   ├── definitions
+│   │   ├── index.yaml
+│   │   ├── propertyRequest.yaml
+│   │   └── propertyResponse.yaml
+│   ├── index.js
+│   ├── middleware
+│   │   └── swagger.js
+│   ├── paths
+│   │   ├── filter.yaml
+│   │   ├── index.yaml
+│   │   └── ping.yaml
+│   ├── responses
+│   │   ├── 400.yaml
+│   │   ├── 401.yaml
+│   │   ├── 404.yaml
+│   │   ├── 500.yaml
+│   │   └── index.yaml
+│   └── swagger
+│       ├── src.yaml
+│       ├── swagger.yaml
+│       └── util.js
+├── bin
+│   └── www.js
+├── config
+│   └── default.yaml
+├── index.js
+├── newrelic.js
+├── package.json
+└── test
+    ├── api.spec.js
+    └── mock
+        ├── hometrack-sample-request.json
+        └── hometrack-sample-response.json
 
 ```
 
