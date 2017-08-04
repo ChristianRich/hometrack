@@ -2,7 +2,6 @@ import test from 'ava';
 import request from 'supertest';
 import app from '../api';
 import is from 'is_js';
-import * as _ from 'lodash';
 import { default as swagger } from '../api/swagger/util';
 const HOST = 'http://localhost:';
 const PORT = 3000;
@@ -24,7 +23,7 @@ test('/GET ping', async(t) => {
 });
 
 test('/POST properties', async(t) => {
-    // t.plan(2);
+    t.plan(2);
 
     const mockRequest = require('./mock/hometrack-sample-request.json'),
         mockResponse = require('./mock/hometrack-sample-response.json');
@@ -34,13 +33,11 @@ test('/POST properties', async(t) => {
         .send(mockRequest)
         .expect(200);
 
-    // t.true(true)
-
     t.true(is.object(results.body), 'Result should be an object');
-    // t.true(_.isEqual(results.body, mockResponse), 'Service output is equal to provided JSON response data');
+    t.true(results.body.response.length === 7, 'Expected exactly 7 records')
 });
 
-test.only('/POST properties', async(t) => {
+test('/POST properties', async(t) => {
 
     t.plan(1);
 
