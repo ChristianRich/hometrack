@@ -1,0 +1,4 @@
+PropertyRequest:
+  $ref: ./propertyRequest.yaml
+PropertyResponse:
+  $ref: ./propertyResponse.yaml

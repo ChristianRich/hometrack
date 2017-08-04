@@ -1,0 +1,24 @@
+swagger: '2.0'
+info:
+  title: Hometrack API
+  version: 1.0.0
+  description: Coding challenge API
+  contact:
+    name: Christian Rich
+    email: christian.schlosrich@gmail.com
+
+# basePath prefixes all resource paths
+basePath: /
+
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  $ref: ./api/paths/index.yaml
+definitions:
+  $ref: ./api/definitions/index.yaml
+responses:
+  $ref: ./api/responses/index.yaml

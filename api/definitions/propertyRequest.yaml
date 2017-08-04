@@ -1,0 +1,51 @@
+type: object
+properties:
+  payload:
+    type: array
+    items:
+      type: object
+      properties:
+        address:
+          type: object
+          properties:
+            buildingNumber:
+              type: string
+            lat:
+              type: number
+            lon:
+              type: number
+            postcode:
+              type: string
+            state:
+              type: string
+            street:
+              type: string
+            suburb:
+              type: string
+            unitNumber:
+              type: string
+        propertyTypeId:
+          type: number
+        readyState:
+          type: string
+        reference:
+          type: string
+        shortId:
+          type: string
+        status:
+          type: number
+        type:
+          type: string
+        workflow:
+          type: string
+        valfirm:
+          type: 'null'
+      required:
+        - address
+        - propertyTypeId
+        - readyState
+        - reference
+        - shortId
+        - status
+        - type
+        - workflow

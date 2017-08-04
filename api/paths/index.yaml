@@ -1,0 +1,4 @@
+/ping:
+  $ref: ./ping.yaml
+/filter:
+  $ref: ./filter.yaml

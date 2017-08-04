@@ -1,0 +1,7 @@
+x-swagger-router-controller: ping
+get:
+  summary: API heartbeat
+  description: API heartbeat
+  responses:
+    200:
+      description: OK

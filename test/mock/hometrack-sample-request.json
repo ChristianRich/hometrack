@@ -1,81 +1,4 @@
-# Hometrack Coding Challenge
-
-### Live demo (warning: Free Heroku account = slow loading)
-
-[https://hometrack-code-test.herokuapp.com](https://hometrack-code-test.herokuapp.com)
-
-### Directory structure
-
-```shell
-
-```
-
-## Stack
-
-### Framework
-- Node (es6/7)
-- Express 4
-- Swagger
-
-### Plugins
-- Babel
-
-### Code quality control
-- Eslint
-- Unit testing
-- Coverage reporting
-
-### Installation
-
-This app requires [Node.js](https://nodejs.org/) v 6.11.2 or later to run
-
-Clone this project.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ cd hometrack
-$ npm install
-$ npm start
-```
-
-### Swagger
-
-![Swagger logo](http://2434zd29misd3e4a4f1e73ki.wpengine.netdna-cdn.com/wp-content/uploads/2016/10/cropped-Swagger-Logo.png)
-
-[Swagger.io](http://swagger.io/)
-
-Swagger UI allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your Swagger specification, with the visual documentation making it easy for back end implementation and client side consumption.
-
-Swagger UI is available directly from the production URL:
-
-[https://hometrack-code-test.herokuapp.com](https://hometrack-code-test.herokuapp.com)
-
-### Test
-```sh
-npm test
-```
-
-### Coverage
-Outputs a code test coverage report to stdout and saves the HTML report to /coverage
-```sh
-npm run coverage
-```
-
-### Todos
- - Performance metrics e.g NewRelic
- - Load testing the API using minigun or similar
- - Production environment: Auto scaling and load balancing
- - Adding more tests
- - Dev only: Adding nodemon (filewatching, auto restart)
-
-### Query the live API from your command line
-
-Run this from your terminal. It will query the live API posting provided JSON request sample data.
-Unix / Linux systems only.
-
-```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+{
     "payload": [
         {
             "address": {
@@ -198,5 +121,4 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
             "workflow": "cancelled"
         }
     ]
-}' 'https://hometrack-code-test.herokuapp.com/filter'
-```
+}

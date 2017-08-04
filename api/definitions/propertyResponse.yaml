@@ -1,0 +1,17 @@
+type: object
+properties:
+  response:
+    type: array
+    items:
+      type: object
+      properties:
+        concataddress:
+          type: string
+        type:
+          type: string
+        workflow:
+          type: string
+      required:
+        - concataddress
+        - type
+        - workflow
