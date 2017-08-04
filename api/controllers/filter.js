@@ -5,7 +5,7 @@ module.exports = {
 	post: (req, res) => {
 
 		if(!_.isArray(req.body.payload)){
-			return res.status(400);
+			return res.status(400).send();
 		}
 
 		res
