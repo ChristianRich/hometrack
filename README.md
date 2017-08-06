@@ -118,6 +118,7 @@ npm run coverage
 
 ### Todos
  - Load testing the API using minigun or similar
+ - Implementing security measures e.g API key
  - Production environment: Auto scaling and load balancing
  - Adding more tests
  - Dev only: Adding nodemon (filewatching, auto restart)
