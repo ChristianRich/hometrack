@@ -117,7 +117,6 @@ npm run coverage
 ```
 
 ### Todos
- - Performance metrics e.g NewRelic
  - Load testing the API using minigun or similar
  - Production environment: Auto scaling and load balancing
  - Adding more tests
